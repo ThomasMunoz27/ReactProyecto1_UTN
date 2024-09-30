@@ -12,11 +12,15 @@ interface ItemProduct {
 export const AppProduct = () => {
 
     const [products, setProducts] = useState<ItemProduct[]>([]);
+
+    
+
     const handleAddProduct = (newItem: ItemProduct) =>{
         setProducts((prev)=> [...prev, newItem]
         )
     }
 
+    
 return (
     <div>
         <Header/>
@@ -24,7 +28,6 @@ return (
         <FormProduct handleAddProduct={handleAddProduct}/>
         <h2 className="text-center">Productos</h2>
         {products.length > 0 ? <ListProduct arrItems={products}/> : (<h3 className="text-center">No hay productos</h3>)}
-
     </div>
 )
 }

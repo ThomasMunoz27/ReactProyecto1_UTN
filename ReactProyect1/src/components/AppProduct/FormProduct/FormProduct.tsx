@@ -40,8 +40,9 @@ export const FormProduct: FC<IPropsFormProduct>= ({handleAddProduct}) => {
             <Form.Label/>Precio<Form.Label/>
             <Form.Control type="number" name="precio" placeholder="Ingrese el nombre del producto" value={values.precio} onChange={handleChange}/>
         </Form.Group>
+
         <div className="d-flex justify-content-center mt-4">
-            <button onClick={handleSubmitForm}>Enviar</button>
+            <button onClick={handleSubmitForm}>Enviar Producto</button>
         </div>
     </Form>
 )
